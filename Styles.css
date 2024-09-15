@@ -51,7 +51,104 @@ header {
     left: 0;
     gap: 20px; /* Ajuste o valor conforme necessário */
     z-index: 2; /* Garante que o header fique sobre os outros elementos */
+    padding: 10px;
 }
+
+/* parte do código para o menu*/
+/* Estilos gerais para o menu hambúrguer */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    transform: translateY(-50%); /* Centraliza verticalmente o botão */
+    z-index: 1000;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    position: relative;
+    display: block;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+/* Menu lateral */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50%; /*modifica a largura do menu*/
+    height: 45%;
+    background: rgba(251, 235, 210, 0.9); /* Fundo branco com transparência */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 0 0 20px;
+    z-index: 999;
+    overflow: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.mobile-menu.active {
+    display: block;
+    transform: translateX(0);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.mobile-menu ul li {
+    margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;;
+    display: block;
+    background-color: #7E1312; /* Cor de fundo dos botões */
+    padding: 10px 15px;
+    border-radius: 15px; /* Borda arredondada para os botões */
+    transition: background-color 0.3s; /* Animação suave para a cor do fundo */
+}
+
+.mobile-menu ul li:first-child {
+    margin-top: 30px; /* Adiciona mais espaço acima do primeiro item */
+}
+/* Esconde o botão do menu quando o menu está ativo */
+.menu-toggle.hidden {
+    display: none;
+}
+
+/* fim da parte do código para menu*/
 
 #apresentacao {
     background-color: #7E1312; 
@@ -91,36 +188,19 @@ header {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     margin-right: 10px;
 }
-.nav-container {
-    align-items: center;
+
+.logo img {
+    width: 150px; /* Largura padrão para a logo */
+    height: auto; /* Mantém a proporção da logo */
 }
 
-.listaTopo{
+
+
+.listaTopo {
     margin: 0;
     padding: 0;
     /* Adicionar espaçamento entre os itens */
     gap: 10px;
-}
-nav li {
-    font-family: "Nerko One", cursive;
-    margin: 0.2rem; /* Aumenta o espaçamento entre os itens do menu */
-    display: inline-block;
-    right: 0;
-}
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 15px 25px;
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    /*background-color: #FAF1D1;*/
-    background-color: #7E1312;
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-}
-
-nav a:hover {
-    background-color: coral;
 }
 
 #produtos {
@@ -185,12 +265,194 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 150px;
-
+    height: auto;
+    color: #7E1312;
+   
 }
 
+#rappi-icon, #foodtosave-icon {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    border: none; /* Remove qualquer borda padrão */
+}
 
+#contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+#app-delivery {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 5px;
+}
+#informacoes{
+    top: 5px;
+    height: auto;
+    width: 370px;
+    padding: 1px;
+}
+.logo-footer {
+    width: auto; /* Ajuste o tamanho conforme a sua imagem */
+    height: auto;
+    background-color: #FBEBD2; /* Fundo escuro para a logo */
+    border-radius: 50%;
+    padding: 10px;
+}
+.icon {
+    font-size: 0.9rem;
+    color: #7E1312;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
+.dev {
+    font-size: 0.5rem;
+    margin-right: 0;
+}
 
+.whats {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
 
+@media (max-width: 480px) {
+    
+    .menu-icon {
+        display: block;
+    }
+
+    .logo img {
+        width: 80px; /* Reduz a largura da logo para telas menores */
+        height: auto; /* Mantém a proporção da logo */
+
+    }
+
+    .logo-container {
+        padding: 5px; /* Ajusta o padding do contêiner da logo */
+    }
+
+    header {
+        height: auto; /* Permite que a altura do header se ajuste automaticamente */
+        padding: 10px; /* Ajusta o padding do header para telas menores */
+    }
+
+    
+    #apresentacao {
+        padding: 10px; /* Aumenta o espaçamento interno para dispositivos menores */
+        margin-top: 70px; /* Ajusta a margem superior, se necessário */
+        font-size: 14px; /* Ajusta o tamanho da fonte para melhorar a leitura em dispositivos menores */
+        height: autopx;
+        width: auto;
+    }
+
+    #apresentacao h1 {
+        font-size: 17px; /* Diminui o tamanho da fonte para h1 em telas menores */
+        margin-top: 20px; /* Ajusta a margem superior do h1 */
+    }
+
+    #textoHome {
+        font-size: 14px; /* Ajusta o tamanho da fonte do parágrafo em telas menores */
+        margin: 0 10px; /* Adiciona um pouco de margem lateral */
+    }
+    #produtos {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #produtos h2 {
+        font-weight: 400px;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    #listaProdutos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Ajuste o espaçamento entre os itens */
+    }
+    #listaProdutos div {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+      }
+      #listaProdutos img {
+        max-width: 100%;
+        height: auto;
+      }
+    
+        #produtos h3, h4 {
+        font-size: 2em;
+        width: 100%;
+        font-size: 30px;
+    }
+    #produtos h5 {
+        font-size: 3em;
+        width: 100%;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    #listaProdutos {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+    }
+     #contacts {
+        padding: 1px;
+    }
+    #logo-footer img {
+        max-width: 80%;
+    }
+    .icon {
+        padding: 0.2rem;
+        padding: 0.1rem;
+    }
+    .icon i {
+        margin-bottom: 1px;
+    }
+
+    #app-delivery {
+        margin-top: 5px;
+        margin-right: 2px;
+    }
+
+    #app-delivery img {
+        max-width: 40px;
+        margin: 0 5px;
+    }
+
+    #app-delivery a {
+        margin: 0 5px;
+    }
+    .dev {
+        margin-top: 5px;
+    }
+
+    #direitos {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .whats {
+    right: 10px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    
+}
+
+/*768*/
+/*1280*/
 

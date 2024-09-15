@@ -45,3 +45,39 @@
   .next {
     right: 15px;
   }
+
+  @media (max-width: 480px) {
+    #slider {
+        height: 200px; /* Ajuste a altura para uma melhor visualização em telas pequenas */
+    }
+
+    .slide img {
+        height: 200px; /* Ajusta a altura da imagem no slider */
+        object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    }
+
+    /* Especificando imagens diferentes para telas pequenas */
+    .slide img[src="/Site/Images/Slides/paodequeijo.png"] {
+        content: url('/Site/Images/Slides/mobile/paodequeijo.png');
+    }
+
+    .slide img[src="/Site/Images/Slides/paes.png"] {
+        content: url('/Site/Images/Slides/mobile/paes.png');
+    }
+
+    .slide img[src="/Site/Images/Slides/Baguetes.png"] {
+        content: url('/Site/Images/Slides/mobile/baguetes.png');
+    }
+
+    .slide img[src="/Site/Images/Slides/salgados.png"] {
+        content: url('/Site/Images/Slides/mobile/salgados.png');
+    }
+
+    .slide img[src="/Site/Images/Slides/Combos.png"] {
+        content: url('/Site/Images/Slides/mobile/combos.png');
+    }
+
+    .prev, .next {
+        font-size: 20px; /* Ajusta o tamanho dos botões de navegação */
+    }
+}

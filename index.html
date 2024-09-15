@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panificadora 199 | Padaria | Higienópolis </title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.min.css">
 </head>
 <body>
     <div>
@@ -14,15 +15,18 @@
                     <img src="./Site/Images/Logopadaria.png" style="display: block;" alt="pão">
                 </div>                             
             </div>
-            <nav> 
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="menu-icon"></span>
+            </button> 
+            <nav class="mobile-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="historia.html">História</a></li>
-                    <li><a href="encomendas.html">Encomendas</a></li>
-                    <li><a href="delivery.html">Delivery</a></li>
-                    <li><a href="faleconosco.html">Fale Conosco</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                    <li><a href="#fale-conosco">Fale Conosco</a></li>
                 </ul>
-            </nav>  
+            </nav>
         </header>
         <div id="apresentacao">
             <h1></h1>
@@ -76,9 +80,50 @@
             </div>      
         </div>
         <footer>
-            <p>&copy; 2024 Panificadora 199 | Todos os direitos reservados.</p>
-        </footer>  
+            <div id="contacts">
+                <div id="logo-footer">
+                    <img src="./Site/Images/Logopadaria.png" style="display: block;" alt="pão">
+                </div>
+                <div id="informacoes">
+                    <div class="icon"><i class="fa-solid fa-phone"></i>
+                        <p> (11) 3129-3984 </p>                     
+                    </div>  
+                    <div class="icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p> (11) 3256-9986 </p> 
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-house"></i>
+                        <p> Rua: Cel José Eusebio, 199 - Higienópolis - São Paulo - SP</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-clock"></i>
+                        <p> 07h às 22h  </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-square-envelope"></i>
+                        <a href="mailto:panificadora199@gmail.com"> Para encomendas entre em contato</a>
+                    </div>
+                </div>
+                <div id="app-delivery"> 
+                    <a href="https://www.rappi.com.br/restaurantes/900660644-panificadora-199" target="_blank">
+                        <img src="/Site/Images/icones/rappi.jpeg" alt="Ícone do app Rappi" id="rappi-icon">
+                    </a>
+                    <a href="https://app.foodtosave.com.br/stores/fc11fd8f-2600-4f16-9930-dafdb3922281?utm_source=app&utm_medium=share" target="_blank">
+                        <img src="/Site/Images/icones/foodtosave.png" alt="Ícone do app Food to Save" id="foodtosave-icon">
+                    </a>
+                    <p class="dev">Site desenvolvido por </p><a href="mailto:marcos.galdino7@gmail.com">contato</a>
+                </div>
+            </div>
+            <p id="direitos"></p>
+        </footer>
+        <div class="whats">
+            <a href="https://wa.me/551132569986?text=Olá Panificadora 199. Entrei no seu site e gostaria de mais informações" target="_blank">
+                <img src="/Site/Images/icones/whatsapp.png" width="75" alt="Fale conosco pelo whatsapp" title="Fale conosco pelo whatsapp" />
+            </a>
+        </div>  
     <script src="app.js"></script>
     <script src="textos.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>
