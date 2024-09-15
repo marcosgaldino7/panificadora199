@@ -1,4 +1,3 @@
-@import url(/slides.css);
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dela+Gothic+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -16,29 +15,11 @@ body {
     /* Define uma largura máxima para o corpo da página */
     margin: 0;
     width: 100%;
-    min-height: 150vh; /* Garante que o body ocupe toda a altura da tela */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
     display: flex;
     flex-direction: column;
 }
 
-
-
-h1{
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 60px;
-    margin-top: 20px;
-
-}
-
-#textoHome {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 25px;
-}
 
 header {
     display: flex;
@@ -155,31 +136,6 @@ body.menu-open {
 
 /* fim da parte do código para menu*/
 
-#apresentacao {
-    background-color: #7E1312; 
-    color: #FBEBD2; /* Cor do texto */
-    text-align:center;
-    padding: 10px; /* Espaçamento interno */
-    margin-top: 60px;
-}
-
-#slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa a largura total da página */
-    height: 100%; /* Altura da imagem */
-    overflow: hidden; /* Oculta partes da imagem que extrapolem a div */
-    position: absolute;
-    opacity: 0;
-  }
-
-  #slides img {
-    width: 100%; /* Largura da imagem */
-    height: 100%; /* Altura da imagem preenche a div */
-    object-fit: cover; /* Ajusta a imagem para preencher a div proporcionalmente */
-  }
-
 .logo-container {
     align-items: center;
 }
@@ -199,8 +155,6 @@ body.menu-open {
     height: auto; /* Mantém a proporção da logo */
 }
 
-
-
 .listaTopo {
     margin: 0;
     padding: 0;
@@ -208,60 +162,18 @@ body.menu-open {
     gap: 10px;
 }
 
-#produtos {
+main {
     background-color: #7E1312;
-    height: 620px;
-    padding: 10px;
-    width: 100%;
-    z-index: 1; /* Certifique-se de que produtos esteja atrás do slider */
-}
-#produtos h2 {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700px;
-    font-style: normal;
-    font-size: 50px;
-    margin-top: 10px;
     color: #FBEBD2;
-}
-
-#produtos h3, h4, h5 {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 30px;
-    margin-top: 10px;
-    color: #FBEBD2;
-}
-
-#listaProdutos {
-    display: flex;
-    width: 100%;
-    justify-content:space-around;
-    padding:10px;
-}
-
-#listaProdutos div {
-    /* Estilos para cada item do listaProdutos */
-    width: 25%; /* Define a largura de cada item */
     text-align: center;
-    padding: 10px;
+    padding: 20px; /* Remove qualquer padding interno */
+    margin: 0; /* Remove todas as margens */
+    padding-top: 140px; /* Adiciona padding-top para garantir que o main comece abaixo do header */
+    height: 800px;
 }
 
-#listaProdutos img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-#listaProdutos div p {
-    
-    color: #FBEBD2;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 25px;
-    font-style: normal;
+main div p {
+    margin-top: 10px;
 }
 
 footer {
@@ -380,58 +292,7 @@ footer {
 }
 
 @media (max-width: 1280px){
-    #apresentacao {
-        padding: 15px; /* Aumenta o espaçamento interno */
-        margin-top: 80px; /* Ajusta a margem superior para mais espaço acima */
-        font-size: 22px; /* Ajusta o tamanho da fonte para melhor legibilidade */
-    }
-
-    #apresentacao h1 {
-        font-size: 36px; /* Ajusta o tamanho da fonte para o título */
-        margin-top: 20px; /* Margem superior para separar o título do conteúdo */
-    }
-
-    #textoHome {
-        font-size: 20px; /* Ajusta o tamanho da fonte do parágrafo */
-        margin: 0 20px; /* Adiciona margem lateral para evitar o texto colado nas bordas */
-    }
-
-    /* Ajusta a altura e o padding do bloco de produtos */
-    #produtos {
-        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-        padding: 50px; /* Ajusta o padding interno */
-    } 
-
-    #produtos h2 {
-        font-size: 50px; /* Ajusta o tamanho da fonte para h2 */
-        margin-top: 2px; /* Ajusta a margem superior do h2 */
-    }
-
-    #produtos h3, h4, h5 {
-        font-size: 40px; /* Ajusta o tamanho da fonte para h2 */
-        margin-top: 30px; /* Ajusta a margem superior do h2 */
-    }
-
-    #listaProdutos {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
-        justify-content: space-around;
-    }
-
-    #listaProdutos div {
-        width: 45%; /* Ajusta a largura dos itens da lista para caber melhor em telas intermediárias */
-        text-align: center;
-        padding: 15px; /* Ajusta o padding interno */
-    }
-
-    #listaProdutos img {
-        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-
-    #listaProdutos div p {
-        font-size: 30px; /* Ajusta o tamanho da fonte dos parágrafos */
-    }
+    
     
 }
 
@@ -450,53 +311,7 @@ footer {
 @media (max-width: 768px){
     .menu-toggle {
         display: block;
-    }   
-    #apresentacao {
-        padding: 20px; /* Aumenta o espaçamento interno para dispositivos intermediários */
-        margin-top: 70px; /* Ajusta a margem superior, se necessário */
-        font-size: 18px; /* Ajusta o tamanho da fonte para melhorar a leitura em dispositivos intermediários */
-   }
-    
-      #apresentacao h1 {
-        font-size: 24px; /* Ajusta o tamanho da fonte para h1 em telas intermediárias */
-        margin-top: 20px; /* Ajusta a margem superior do h1 */}
-    
-      #textoHome {
-        font-size: 18px; /* Ajusta o tamanho da fonte do parágrafo em telas intermediárias */
-        margin: 0 15px; /* Adiciona um pouco de margem lateral */
-   
-    } 
-    /* Ajusta a altura e o padding do bloco de produtos */
-    #produtos {
-        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-        padding: 20px; /* Ajusta o padding interno */
-    }
-
-    #produtos h2 {
-        font-size: 30px; /* Ajusta o tamanho da fonte para h2 */
-        margin-top: 10px; /* Ajusta a margem superior do h2 */
-    }
-
-    #listaProdutos {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
-        justify-content: space-around;
-    }
-
-    #listaProdutos div {
-        width: 45%; /* Ajusta a largura dos itens da lista para caber melhor em telas intermediárias */
-        text-align: center;
-        padding: 15px; /* Ajusta o padding interno */
-    }
-
-    #listaProdutos img {
-        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-
-    #listaProdutos div p {
-        font-size: 20px; /* Ajusta o tamanho da fonte dos parágrafos */
-    }
+    }    
 
 }
 
@@ -522,70 +337,7 @@ footer {
     }
 
     
-    #apresentacao {
-        padding: 10px; /* Aumenta o espaçamento interno para dispositivos menores */
-        margin-top: 70px; /* Ajusta a margem superior, se necessário */
-        font-size: 14px; /* Ajusta o tamanho da fonte para melhorar a leitura em dispositivos menores */
-        height: autopx;
-        width: auto;
-    }
-
-    #apresentacao h1 {
-        font-size: 17px; /* Diminui o tamanho da fonte para h1 em telas menores */
-        margin-top: 20px; /* Ajusta a margem superior do h1 */
-    }
-
-    #textoHome {
-        font-size: 14px; /* Ajusta o tamanho da fonte do parágrafo em telas menores */
-        margin: 0 10px; /* Adiciona um pouco de margem lateral */
-    }
-    #produtos {
-        height: auto;
-        width: 100%;
-        padding: 20px;
-    }
-
-    #produtos h2 {
-        font-weight: 400px;
-        font-size: 25px;
-        margin-top: 10px;
-    }
-
-    #listaProdutos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Ajuste o espaçamento entre os itens */
-    }
-    #listaProdutos div {
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-      }
-      #listaProdutos img {
-        max-width: 100%;
-        height: auto;
-      }
-    
-        #produtos h3, h4 {
-        font-size: 2em;
-        width: 100%;
-        font-size: 30px;
-    }
-    #produtos h5 {
-        font-size: 3em;
-        width: 100%;
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-    
-    #listaProdutos {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        align-items: center;
-    }
-     #contacts {
+    #contacts {
         padding: 1px;
     }
     #logo-footer img {

@@ -46,6 +46,23 @@
     right: 15px;
   }
 
+  @media (max-width: 768px) {
+     /* Ajusta a altura do slider para uma melhor visualização em dispositivos intermediários */
+     #slider {
+      height: 250px; /* Ajuste conforme necessário */
+  }
+
+  .slide img {
+      height: 250px; /* Ajusta a altura da imagem no slider */
+      object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  }
+
+  /* Ajusta o tamanho das fontes para títulos no slider */
+  #slider .prev, #slider .next {
+      font-size: 24px; /* Ajusta o tamanho dos botões de navegação */
+  }
+  }
+
   @media (max-width: 480px) {
     #slider {
         height: 200px; /* Ajuste a altura para uma melhor visualização em telas pequenas */

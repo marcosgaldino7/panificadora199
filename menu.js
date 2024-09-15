@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar o menu
     menuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
-        // Ocultar o menu quando o corpo for clicado
+        // Adicionar ou remover a classe menu-open no body
         if (mobileMenu.classList.contains('active')) {
+            // Descomente a linha abaixo se desejar adicionar algum estilo ao body quando o menu está aberto
+            // body.style.overflow = 'hidden';
             body.addEventListener('click', outsideClickListener);
         } else {
+            // body.style.overflow = ''; // Reset the overflow property when the menu is closed
             body.removeEventListener('click', outsideClickListener);
         }
     });
@@ -18,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function outsideClickListener(event) {
         if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
             mobileMenu.classList.remove('active');
+            // Reset the overflow property when the menu is closed
+            body.style.overflow = ''; 
             body.removeEventListener('click', outsideClickListener);
         }
     }
