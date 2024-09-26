@@ -49,7 +49,8 @@
   @media (max-width: 768px) {
      /* Ajusta a altura do slider para uma melhor visualização em dispositivos intermediários */
      #slider {
-      height: 250px; /* Ajuste conforme necessário */
+      height: 210px; /* Ajuste conforme necessário */
+      background-color: #FBEBD2;;
   }
 
   .slide img {
@@ -62,6 +63,14 @@
       font-size: 24px; /* Ajusta o tamanho dos botões de navegação */
   }
   }
+
+    @media (max-width: 716px){
+      .slide img {
+        height: auto; /* Ajusta a altura da imagem no slider */
+        object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */   
+      }
+    }
+
 
   @media (max-width: 480px) {
     #slider {

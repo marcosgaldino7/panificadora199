@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dela+Gothic+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+main {
+    height: auto;
+}
+
+.historia {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+    height: 80vh;
+    margin: 50px 10% 20px 10%;
+    background-image: url(/Site/Images/historia/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Para garantir que o pseudo-elemento não ultrapasse os limites */
+}
+
+ 
+.historia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0%;
+    bottom: 0px;
+    background-color: rgba(251, 235, 210, 0.8); /* Cor #FBEBD2 com 70% de opacidade */
+    z-index: 1; /* Coloca a cor acima da imagem de fundo */
+}
+
+.historia > * {
+    position: relative; /* Permite que os filhos fiquem acima do pseudo-elemento */
+    z-index: 2; /* Coloca o conteúdo acima do fundo */
+    padding: 20px; /* Adiciona um espaço interno para o conteúdo */
+    /* Outros estilos que você deseja aplicar ao conteúdo */
+}
+
+.imagem-container {
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+.imagem-container img {
+    width: 100%; /* Garantir que a imagem dentro do container ocupe todo o espaço */
+    height: auto;
+}
+
+.sobre {
+    display: flex;
+    width: 100%;
+}
+
+.imagem-container {
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+.imagem-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texto-container {
+    flex: 1; 
+    padding: o 20px 0px 20px; 
+}
+
+.texto-container h4 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 60px;
+    margin-top: 20px;
+    color: #7E1312;
+}
+
+.texto-container P {
+    color: #7E1312;
+    font-weight: 900;
+}
+
+.missao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh; /* Metade da altura da seção história */
+    margin: 20px 10%;
+    background-color: rgba(251, 235, 210, 0.9); /* Cor de fundo, você pode ajustar conforme o design */
+    padding: 20px;
+    position: relative;
+}
+
+.missao > * {
+    flex: 1;
+    padding: 10px;
+}
+
+.missao h4 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 800;
+    font-size: 40px;
+    color: #7E1312;
+}
+
+.missao p {
+    font-weight: 500;
+    color: #7E1312;
+}
