@@ -1,0 +1,725 @@
+* {
+    margin: 0;
+}
+
+main {
+    height: auto;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto; /* Ajuste para a altura mínima necessária */
+    padding: 50px 0; /* Adicionando algum espaçamento vertical */
+    background-color: #FBEBD2;
+    margin: 50px 5% 20px 5%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.contacts-image {
+    flex: 0 0 40%; /* Reduzir para 40% */
+    display: flex;
+    justify-content: center;
+    margin-left: 5%; /* Ajustar para centralizar */
+}
+
+.contacts-image img  {
+    max-width: 100%;
+    max-height: 500px; /* Limitar a altura da imagem */
+    height: auto;
+}
+
+.contacts-txt {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contacts-txt p {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #7E1312;
+    font-size: 2rem;
+}
+
+.contacts-txt span {
+
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4rem;
+    margin-top: 20px;
+    color: #7E1312;
+
+}
+
+
+.whatsapp {
+    
+    width: 100%;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.whatsapp-float {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.whatsapp-float span {
+    margin-bottom: 5px; /* Espaço entre o texto e o ícone */
+    color: #fff; /* Cor do texto "Clique aqui" */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.whatsapp-float a {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.formulario {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /*
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 100px;
+    */
+}
+
+.formulario h3 {
+
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3.75rem;
+    margin-top: 20px;
+    color: #7E1312;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.formulario span {
+    color: #7E1312;
+    font-weight: 550;
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+
+.emails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto; /* Ajuste para a altura mínima necessária */
+    padding: 50px 0; /* Adicionando algum espaçamento vertical */
+    background-color: #FBEBD2;
+    margin: 50px 5% 20px 5%;
+}
+
+.video-container {
+    flex: 0 0 40%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+}
+
+.form label, .form input, 
+.form textarea, .form button {
+    display: block;
+    width: 100%;
+}
+
+.form label {
+    color: black;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.form input, .form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color;
+    box-shadow: 0.2s;
+}
+
+.form textarea {
+    min-height: 13rem;
+    resize: vertical;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
+    outline: none;
+    border-color: #7E1312;
+    box-shadow: 0 0 0 3px #7E1312;
+}
+
+.form button {
+    display: block;
+    padding: 1rem;
+    background-color: #7E1312;
+    color: #FBEBD2;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form button:hover,
+.form button:focus {
+    outline: none;
+    background-color: #7E1312;
+}
+
+.enderecos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto; 
+    padding: 50px 0; 
+    background-color: #FBEBD2;
+    margin: 50px 5% 20px 5%;    
+}
+
+.endereco-txt {
+    flex: 0 0 40%; /* Reduzir para 40% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%; /* Ajustar para centralizar */
+}
+
+.endereco-txt h5 {
+    color: #7E1312;
+    font-size: 2rem;
+    padding-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.endereco-txt li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    color: #7E1312;
+    font-size: 1.5rem;
+}
+
+.endereco-txt ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 10px;
+}
+
+.endereco-maps {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 1px;
+    margin-right: 20px; 
+}
+
+.endereco-maps iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px){
+    .endereco-txt {
+        flex: 0 0 40%; /* Reduzir para 40% */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5%; /* Ajustar para centralizar */
+    }
+    
+    .endereco-txt h5 {
+        font-size: 1.8rem;
+        padding-top: 45px;
+        margin-left: 18px;
+        margin-bottom: 22px;
+    }
+    
+    .endereco-txt li {
+        font-size: 1.3rem;
+    }
+    
+    .endereco-txt ul {
+        gap: 9px;
+    }
+    
+    .endereco-maps {
+        width: 95%;
+        height: 50vh;
+        margin-bottom: 1px;
+        margin-right: 20px; 
+    }
+    
+    
+    
+}
+
+@media (max-width: 1000px){
+
+    .contato { 
+        margin: 50px 3% 20px 3%;
+    }
+
+    .emails {
+        margin: 50px 3% 20px 3%;
+    }
+
+    .enderecos {
+        margin: 50px 3% 20px 3%;
+    }
+}
+
+@media (max-width: 900px){
+
+    .contato { 
+        margin: 50px 1% 20px 1%;
+    }
+
+    .emails {
+        margin: 50px 1% 20px 1%;
+    }
+
+    .enderecos {
+        margin: 50px 1% 20px 1%;
+    }
+
+    .endereco-txt {
+        padding-left: 0px;
+        padding-right: 10px;
+
+    }
+
+    
+    .endereco-txt h5 {
+        font-size: 1.5rem;
+        padding-top: 40px;
+        margin-left: 15px;
+        margin-bottom: 28px;
+    }
+    
+    .endereco-txt li {
+        font-size: 1rem;
+        padding-left: 0px;
+    }
+    
+    .endereco-txt ul {
+        gap: 6px;
+    }
+    
+    .endereco-maps {
+        width: 90%;
+        height: 45vh;
+        margin-bottom: 1px;
+        margin-right: 18px; 
+    }
+}
+
+@media (max-width: 800px){
+
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px; 
+        margin: 0 auto;
+    }
+    
+    .contacts-image {
+
+        flex: 0 0 30%; 
+   
+    }
+    
+
+    .contacts-txt {
+        flex: 1;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .contacts-txt p {
+  
+        font-size: 1.5rem;
+    }
+    
+    .contacts-txt span {
+    
+
+        font-size: 3rem;
+
+    
+    }
+    
+
+    .contato { 
+        margin: 50px 2% 20px 2%;
+    }
+
+    .emails {
+        margin: 50px 2% 20px 2%;
+    }
+
+    .enderecos {
+        margin: 50px 1% 20px 1%;
+    }
+
+    .endereco-txt {
+        padding-left: 0px;
+        padding-right: 10px;
+
+    }
+
+    
+    .endereco-txt h5 {
+        font-size: 1.5rem;
+        padding-top: 40px;
+        margin-left: 15px;
+        margin-bottom: 28px;
+    }
+    
+    .endereco-txt li {
+        font-size: 1rem;
+        padding-left: 0px;
+    }
+    
+    .endereco-txt ul {
+        gap: 6px;
+    }
+    
+    .endereco-maps {
+        width: 90%;
+        height: 45vh;
+        margin-bottom: 1px;
+        margin-right: 18px; 
+    }
+
+
+    .contato { 
+        margin: 50px 1% 20px 1%;
+    }
+
+    .emails {
+        margin: 50px 1% 20px 1%;
+    }
+
+    .enderecos {
+        margin: 50px 1% 20px 1%;
+    }
+
+    .endereco-txt {
+        padding-left: 0px;
+        padding-right: 10px;
+
+    }
+
+    
+    .endereco-txt h5 {
+        font-size: 1.5rem;
+        padding-top: 40px;
+        margin-left: 15px;
+        margin-bottom: 28px;
+    }
+    
+    .endereco-txt li {
+        font-size: 1rem;
+        padding-left: 0px;
+    }
+    
+    .endereco-txt ul {
+        gap: 6px;
+    }
+    
+    .endereco-maps {
+        width: 85%;
+        height: 45vh;
+        margin-bottom: 1px;
+        margin-right: 18px; 
+    }
+
+    .formulario h3 {
+
+
+        font-size: 3.3rem;
+      
+    }
+    
+    .formulario span {
+
+        font-size: 1rem;
+
+    }
+}
+
+@media (max-width: 700px){
+    
+    .contacts-image {
+
+        flex: 0 0 25%; 
+   
+    }
+    
+
+    .contacts-txt {
+        flex: 1;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .contacts-txt p {
+  
+        font-size: 1.3rem;
+    }
+    
+    .contacts-txt span {
+    
+
+        font-size: 2.3rem;
+
+    
+    }
+
+    .enderecos {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .form {
+        width: 90%;
+        max-width: 32rem;
+        font-size: 0.9rem;
+    }
+   
+    
+    .form label {
+    
+        margin-bottom: 0.4rem;
+    }
+
+    .endereco-txt {
+        padding-left: 0px;
+        padding-right: 10px;
+
+    }
+
+    
+    .endereco-txt h5 {
+        font-size: 3rem;
+        padding-top: 40px;
+    }
+    
+    .endereco-txt li {
+        font-size: 1.5rem;
+    }
+    
+    .endereco-txt ul {
+        gap: 6px;
+    }
+    
+    .endereco-maps {
+        width: 90%;
+        height: 40vh;
+        margin-bottom: 1px;
+        margin-right: 18px; 
+    }
+
+}
+
+@media (max-width: 600px){
+    
+    
+    .contacts-txt p {
+  
+        font-size: 1.2rem;
+    }
+    
+    .contacts-txt span {
+    
+
+        font-size: 2.1rem;
+
+    
+    }
+
+    
+    .form {
+        width: 80%;
+        max-width: 32rem;
+        font-size: 0.7rem;
+    }
+   
+    
+    .form label {
+    
+        margin-bottom: 0.4rem;
+    }
+
+    .endereco-txt {
+        padding-left: 0px;
+        padding-right: 10px;
+
+    }
+
+    
+    .endereco-txt h5 {
+        font-size: 3rem;
+        padding-top: 40px;
+    }
+    
+    .endereco-txt li {
+        font-size: 1.5rem;
+    }
+    
+    .endereco-txt ul {
+        gap: 6px;
+    }
+    
+    .endereco-maps {
+        width: 90%;
+        height: 40vh;
+        margin-bottom: 1px;
+        margin-right: 18px; 
+    }
+
+}
+
+@media (max-width: 500px){
+    
+    
+   .emails {
+        flex-direction: column;
+   }
+
+   .emails .video-container {
+        width: 100%;
+        max-width: 300px; 
+        margin: 0 auto; 
+    }
+
+    .emails video {
+        width: 100%; 
+        height: auto; 
+    }
+
+    
+    .form {
+        width: 80%;
+        max-width: 32rem;
+        font-size: 0.7rem;
+    }
+   
+    
+    .form label {
+    
+        margin-bottom: 0.4rem;
+    }
+
+    .endereco-txt {
+        padding-left: 0px;
+        padding-right: 10px;
+
+    }
+
+    
+    .endereco-txt h5 {
+        font-size: 2.5rem;
+    }
+    
+    .endereco-txt li {
+        font-size: 1rem;
+    }
+    
+    .endereco-txt ul {
+        gap: 6px;
+    }
+    
+    .endereco-maps {
+        width: 90%;
+        height: 40vh;
+        margin-bottom: 1px;
+        margin-right: 18px; 
+    }
+
+    .emails .video-container {
+        width: 80%;
+        max-width: 250px; 
+        margin: 0 auto; 
+    }
+
+    .emails video {
+        width: 100%; 
+        height: auto; 
+    }
+
+    
+
+}
+
+@media (max-width: 400px){
+
+    .contacts-txt p {
+  
+        font-size: 0.8rem;
+    }
+    
+    .contacts-txt span {
+    
+
+        font-size: 1.5rem;
+
+    
+    }
+
+    
+
+
+}

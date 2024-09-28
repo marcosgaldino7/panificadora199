@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dela+Gothic+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+}
+
+main {
+    height: auto;
+}
+
+.entregas {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    margin: 50px 10% 20px 10%;
+    background-color: #FBEBD2;  
+}
+
+.entregas-titulo {
+    align-items: center;
+    color: #7E1312;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.entregas-titulo h1 {
+    font-family: "Dancing Script", cursive;
+    font-weight:900;
+    font-size: 4rem;
+    color: #7E1312;
+}
+
+.entregas-regiao {
+    display: flex;
+    margin: 0;
+    height: 50%;
+    width: 100%;
+}
+
+.delivery-imagem, .delivery-texto {
+    flex: 0 0 50%;
+    padding: 0 10px;
+}
+
+.delivery-imagem img {
+    width: 80%; /* Garantir que a imagem dentro do container ocupe todo o espaço */
+    height: auto;
+}
+
+.delivery-texto {
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-texto h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Nerko One", cursive;
+    font-weight:900;
+    font-size: 3rem;
+    color: #7E1312;
+}
+
+.delivery-texto span {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #7E1312;
+    font-size: 1.5rem;
+}
+
+
+.foodtosave {
+    display: flex; 
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    margin: 50px 10% 20px 10%;
+    background-color: #FBEBD2;  
+}
+
+.foodtosave-container {
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    padding: 40px 20px;
+}
+
+.foodtosave-imagem, .foodtosave-texto {
+    flex: 0 0 50%;
+    padding: 0 10px;
+}
+
+.foodtosave-imagem img {
+    width: 70%; 
+    height: auto;
+}
+
+.foodtosave-texto {
+
+    justify-content: center;
+    align-items: center;
+}
+
+.foodtosave-texto h3 {
+        font-family: "Nerko One", cursive;
+        color: #7E1312;
+        font-size: 4rem;
+        padding-bottom: 40px;
+}
+
+.foodtosave-texto span {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #7E1312;
+    font-size: 1.5rem;
+}
+
+.foodtosave-texto p {
+    color: black;
+    font-weight: 700;
+}
+
+@media (max-width: 1350px){
+
+    .entregas {
+
+        height: 90vh;
+        margin: 50px 9% 20px 9%;
+
+    }
+
+    .foodtosave {
+
+        height: 100vh;
+        margin: 50px 9% 20px 9%;
+
+    }
+}
+
+@media (max-width: 1200px){
+
+    .entregas {
+
+        height: 90vh;
+        margin: 50px 8% 20px 8%;
+
+    }
+
+    .foodtosave {
+
+        height: 100vh;
+        margin: 50px 8% 20px 8%;
+
+    }
+}
+
+@media (max-width: 1100px){
+
+    .entregas {
+
+        height: 90vh;
+        margin: 50px 7% 20px 7%;
+
+    }
+
+    .foodtosave {
+
+        height: 100vh;
+        margin: 50px 7% 20px 7%;
+
+    }
+}
+
+@media (max-width: 1000px){
+
+    .entregas {
+
+        height: 90vh;
+        margin: 50px 6% 20px 6%;
+
+    }
+
+    .foodtosave {
+
+        height: 100vh;
+        margin: 50px 6% 20px 6%;
+
+    }
+
+    .delivery-texto h3 {
+
+        font-size: 2.7rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 1.2rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 3.7rem;
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 1.3rem;
+
+    }
+
+
+}
+
+@media (max-width: 900px){
+
+    .entregas {
+
+        height: 80vh;
+        margin: 50px 4% 20px 4%;
+
+    }
+
+    .foodtosave {
+
+        height: 90vh;
+        margin: 50px 4% 20px 4%;
+
+    }
+
+    .delivery-texto h3 {
+
+        font-size: 2.5rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 1.1rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 3.7rem;
+        padding: 8px;
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 1.3rem;
+
+    }
+
+
+}
+
+@media (max-width: 800px){
+
+    .entregas {
+
+        height: 600px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .foodtosave {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .delivery-texto h3 {
+
+        font-size: 2rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 0.9rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 3rem;
+        padding: 8px;
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 0.9rem;
+
+    }
+
+
+}
+
+@media (max-width: 700px){
+
+    .entregas {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .foodtosave {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .entregas-titulo h1 {
+        font-size: 2.8rem;
+        padding-bottom: 2px;
+    }
+
+    .delivery-texto h3 {
+
+        font-size: 1.8rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 0.9rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 3rem;
+        padding: 8px;
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 0.9rem;
+
+    }
+
+
+}
+
+@media (max-width: 600px){
+
+    .entregas {
+
+        height: 450px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .foodtosave {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .entregas-titulo {
+        display: none;
+    }
+
+    .delivery-imagem {
+        display: none;
+        background-color: #7E1312;
+    }
+
+    .entregas-regiao {
+        flex: 1;
+    }
+
+    .delivery-texto {
+        flex: 1;
+
+    }
+
+    .delivery-texto h3 {
+        margin-top: 30px;
+        font-size: 3rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 1.5rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 2.5rem;
+        padding: 8px;
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 0.8rem;
+
+    }
+
+    .foodtosave-imagem img {
+        width: 90%; 
+        height: 400px
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .entregas {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .foodtosave {
+
+        height: 1100px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+
+
+    .delivery-texto h3 {
+
+        font-size: 2.8rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 1.3rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 4rem;
+
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 1.5rem;
+
+    }
+
+    .foodtosave-container {
+        flex-direction: column;
+    }
+
+    .foodtosave-imagem img {
+        width: 70%; 
+        height: auto;
+    }
+
+    
+
+}
+
+@media (max-width: 400px){
+
+    .entregas {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .foodtosave {
+
+        height: 1100px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+
+
+    .delivery-texto h3 {
+
+        font-size: 2.6rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 1.2rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 3.5rem;
+
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 1.2rem;
+
+    }
+
+
+    .foodtosave-imagem img {
+        width: 70%; 
+        height: auto;
+    }
+
+    
+
+}
+
+@media (max-width: 400px){
+
+    .entregas {
+
+        height: 500px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+    .foodtosave {
+
+        height: 900px;
+        margin: 50px 3% 20px 3%;
+
+    }
+
+
+
+    .delivery-texto h3 {
+
+        font-size: 2rem;
+
+    }
+    
+    .delivery-texto span {
+
+        font-size: 1rem;
+
+    }
+    
+
+    .foodtosave-texto h3 {
+
+        font-size: 2rem;
+
+
+    }
+
+    .foodtosave-texto span {
+     
+        font-size: 1rem;
+
+    }
+
+
+    .foodtosave-imagem img {
+        width: 70%; 
+        height: auto;
+    }
+
+    
+
+}

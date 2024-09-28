@@ -316,11 +316,57 @@ footer {
     margin-right: 0;
 }
 
-.whats {
+
+@keyframes pulsar {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5; /* Altera a opacidade para 50% */
+    }
+    100% {
+        opacity: 1; /* Retorna à opacidade original */
+    }
+}
+
+@keyframes tremer {
+    0% {
+        transform: translate(0); /* Posição original */
+    }
+    25% {
+        transform: translate(-2px, 2px); /* Movimento para cima e para a esquerda */
+    }
+    50% {
+        transform: translate(2px, -2px); /* Movimento para baixo e para a direita */
+    }
+    75% {
+        transform: translate(-2px, -2px); /* Movimento para cima e para a direita */
+    }
+    100% {
+        transform: translate(0); /* Retorna à posição original */
+    }
+}
+
+.whatsapp-float i {
+    font-size: 80px; /* Tamanho do ícone */
+    background-color: #128C7E;
+    color: #fff; /* Cor do ícone em si */
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    animation: pulsar 1.5s infinite, tremer 0.5s infinite;;
+}
+
+.whatsapp {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     z-index: 9999;
+    width: 75px;
+}
+
+.whatsapp-float i:hover {
+    background-color: #FBEBD2; /* Muda a cor do ícone ao passar o mouse */
 }
 
 .menu-toggle {

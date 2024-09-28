@@ -80,17 +80,16 @@ header {
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60%; /*modifica a largura do menu*/
+    top: 0px;
+    margin: 0;
+    width: 100%; /*modifica a largura do menu*/
     height: 45%;
-    background: rgba(251, 235, 210, 0.9); /* Fundo branco com transparência */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 50px 50px 50px 50px;
+    background: rgba(251, 235, 210, 1); /* Fundo branco com transparência */
     z-index: 999;
-    overflow: auto;
+    overflow: none;
     transition: transform 0.3s ease;
     transform: translateX(100%);
+    
 }
 
 .mobile-menu.active {
@@ -102,7 +101,7 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
     padding-bottom: 30px;
 }
@@ -116,9 +115,7 @@ header {
     font-size: 24px;
     color: #fff;;
     display: block;
-    background-color: #7E1312; /* Cor de fundo dos botões */
-    padding: 10px 15px;
-    border-radius: 15px; /* Borda arredondada para os botões */
+    color: #7E1312; /* Cor de fundo dos botões */
     transition: background-color 0.3s; /* Animação suave para a cor do fundo */
 }
 
@@ -133,6 +130,7 @@ header {
 body.menu-open {
     overflow: hidden !important;
 }
+
 
 /* fim da parte do código para menu*/
 
@@ -230,11 +228,56 @@ footer {
     margin-right: 0;
 }
 
-.whats {
+@keyframes pulsar {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5; /* Altera a opacidade para 50% */
+    }
+    100% {
+        opacity: 1; /* Retorna à opacidade original */
+    }
+}
+
+@keyframes tremer {
+    0% {
+        transform: translate(0); /* Posição original */
+    }
+    25% {
+        transform: translate(-2px, 2px); /* Movimento para cima e para a esquerda */
+    }
+    50% {
+        transform: translate(2px, -2px); /* Movimento para baixo e para a direita */
+    }
+    75% {
+        transform: translate(-2px, -2px); /* Movimento para cima e para a direita */
+    }
+    100% {
+        transform: translate(0); /* Retorna à posição original */
+    }
+}
+
+.whatsapp-float i {
+    font-size: 80px; /* Tamanho do ícone */
+    background-color: #128C7E;
+    color: #fff; /* Cor do ícone em si */
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    animation: pulsar 1.5s infinite, tremer 0.5s infinite;;
+}
+
+.whatsapp {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     z-index: 9999;
+    width: 75px;
+}
+
+.whatsapp-float i:hover {
+    background-color: #FBEBD2; /* Muda a cor do ícone ao passar o mouse */
 }
 
 .menu-toggle {
@@ -243,6 +286,7 @@ footer {
 
 /*opções para dispositivos maiores
 /* Exibe o menu horizontalmente ao lado do logo para dispositivos maiores */
+
 @media (min-width: 1024px) {
     nav {
         display: flex; /* Exibe o menu de navegação em linha */
@@ -290,8 +334,12 @@ footer {
     }
 }
 
+
 @media (max-width: 1280px){
     
+    .imagem-container {
+        display: none;
+    }
     
 }
 

@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panificadora 199 | Padaria | Higienópolis </title>
-    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/faleconosco.css">
     <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="/Site/Images/Logopadaria.ico">
 </head>
 <body>
     <header>
         <div class="logo-container">
             <div class="logo">
-                <img src="./Site/Images/Logopadaria.png" style="display: block;" alt="pão">
+                <img src="/Site/Images/Logopadaria.png" style="display: block;" alt="pão">
             </div>                             
         </div>
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/historia.html">História</a></li>
-                <li><a href="/cardapio.html">Cardápio</a></li>
-                <li><a href="/delivery.html">Delivery</a></li>
-                <li><a href="/faleconosco.html">Fale Conosco</a></li>
+                <li><a href="/pages/historia.html">História</a></li>
+                <li><a href="/pages/delivery.html">Delivery</a></li>
+                <li><a href="/pages/faleconosco.html">Fale Conosco</a></li>
             </ul>
         </nav>
         <button class="menu-toggle" aria-label="Abrir menu">
@@ -29,21 +30,70 @@
         <nav class="mobile-menu">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/historia.html">História</a></li>
-                <li><a href="/cardapio.html">Cardápio</a></li>
-                <li><a href="/delivery.html">Delivery</a></li>
-                <li><a href="/faleconosco.html">Fale Conosco</a></li>
+                <li><a href="/pages/historia.html">História</a></li>
+                <li><a href="/pages/delivery.html">Delivery</a></li>
+                <li><a href="/pages/faleconosco.html">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <p> Texto para elaborar o fale conosco </p>
+        <section class="contato">
+            <div class="contacts">  
+                <div class="contacts-image">
+                    <img src="/Site/Images/faleconosco/whatspadaria.png" alt="Imagem ilustando um contato por whatsapp">
+                </div>
+                <div class="contacts">
+                    <div class="contacts-txt">
+                        <span> <strong> Faça seu pedido ou sua encomenda através do nosso canal de atendimento no whatsapp </strong></span>
+                        <p> (11) 3256-9986 </p>
+                    </div>
 
+                </div>
+            </div>
+         
+        </section>
+        <section class="emails">
+            <div class="video-container">
+                <video width="100%" height="auto" autoplay muted loop>
+                    <source src="/Site/Images/faleconosco/formularios.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="formulario">
+                <h3> <strong> Formulário </strong></h3>
+                <span> Para encomendas, dúvidas sugestões ou reclamações, preencha nosso formulário. </span>
+                <form id="contact-form" class="form" action="https://formsubmit.co/contato@panificadora199.com.br" method="POST">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" placeholder="Escreva sua mensagem aqui" id="message" required></textarea>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/obrigado.html">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>   
+        </section>
+        <section class="enderecos">
+            <div class="endereco-txt">
+                <h5><strong> Unidade Higienópolis </strong></h5> 
+                    <ul>
+                        <li class="branche-txt"><strong>WhatsApp: </strong>(11) 3256-9986 </li>
+                        <li class="branche-txt"><strong>E-mail: </strong>contato@panificadora199.com.br</li>
+                        <li class="branche-text"><strong>Endereço:</strong> Rua Cel. José Eusébio, 199 </li>
+                        <li class="branche-txt"><strong>Bairro:</strong> Higienópolis </li>
+                        <li class="branche-txt"> <strong>Cidade:</strong> São Paulo </li>
+                        <li class="branche-txt"><strong>CEP:</strong> 01239-030</li>
+                    </ul>
+            </div>
+            <div class="endereco-maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14629.935127824005!2d-46.6598409!3d-23.5510623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5831ea9a0ddd%3A0x33033b0cf360455f!2sPanificadora%20Cento%20e%20Noventa%20e%20Nove!5e0!3m2!1spt-BR!2sbr!4v1727534171083!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
     </main>
     <footer>
         <div id="contacts">
             <div id="logo-footer">
-                <img src="./Site/Images/Logopadaria.png" style="display: block;" alt="pão">
+                <img src="/Site/Images/Logopadaria.png" style="display: block;" alt="pão">
             </div>
             <div id="informacoes">
                 <div class="icon"><i class="fa-solid fa-phone"></i>
@@ -59,11 +109,11 @@
                 </div>
                 <div class="icon">
                     <i class="fa-solid fa-clock"></i>
-                    <p> 07h às 22h  </p>
+                    <p> 06h às 22h  </p>
                 </div>
                 <div class="icon">
                     <i class="fa-solid fa-square-envelope"></i>
-                    <a href="mailto:panificadora199@gmail.com"> Para encomendas entre em contato</a>
+                    <a href="mailto:contato@panificadora199.com.br"> Para encomendas entre em contato</a>
                 </div>
             </div>
             <div id="app-delivery"> 
@@ -78,11 +128,14 @@
         </div>
         <p id="direitos"></p>
     </footer>
-    <div class="whats">
-        <a href="https://wa.me/551132569986?text=Olá Panificadora 199. Entrei no seu site e gostaria de mais informações" target="_blank">
-            <img src="/Site/Images/icones/whatsapp.png" width="75" alt="Fale conosco pelo whatsapp" title="Fale conosco pelo whatsapp" />
-        </a>
+    <div class="whatsapp">
+        <div class="whatsapp-float">
+            <a href="https://wa.me/551132569986?text=Olá Panificadora 199. Entrei no seu site e gostaria de mais informações" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>       
     </div>  
-<script src="menu.js"></script>    
+<script src="/js/form.js"></script>    
+<script src="/js/menu.js"></script>    
 </body>
 </html>
