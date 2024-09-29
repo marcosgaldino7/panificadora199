@@ -368,6 +368,12 @@ footer {
         display: block;
     }
 
+    .logo {
+        background-color: none;
+        border-radius: none;    
+        box-shadow: none;
+        }
+
     .logo img {
         width: 80px; /* Reduz a largura da logo para telas menores */
         height: auto; /* Mantém a proporção da logo */
